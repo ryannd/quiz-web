@@ -1,10 +1,10 @@
 'use client'
 import useSocketJoin from "../../_hooks/useSocketJoin";
-import useSocketRoom from "../../_hooks/useSocketRoom";
+import useSocket from "../../_hooks/useSocket";
 
 export default function Room({ params }: { params: { roomCode: string }}) {
     const name = "test";
-    const room = useSocketRoom()
+    const room = useSocket()
 
     useSocketJoin(params.roomCode, name)
 
